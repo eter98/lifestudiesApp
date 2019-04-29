@@ -1,0 +1,81 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-cotizacion-heading" jhiTranslate="lifestudiesApp.cotizacion.home.createOrEditLabel">Create or edit a Cotizacion</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!cotizacion.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="cotizacion.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.cotizacion.nombre" for="field_nombre">Nombre</label>
+                    <input type="text" class="form-control" name="nombre" id="field_nombre"
+                        [(ngModel)]="cotizacion.nombre" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.cotizacion.apellido" for="field_apellido">Apellido</label>
+                    <input type="text" class="form-control" name="apellido" id="field_apellido"
+                        [(ngModel)]="cotizacion.apellido" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.cotizacion.mail" for="field_mail">Mail</label>
+                    <input type="text" class="form-control" name="mail" id="field_mail"
+                        [(ngModel)]="cotizacion.mail" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.cotizacion.areaCode" for="field_areaCode">Area Code</label>
+                    <input type="text" class="form-control" name="areaCode" id="field_areaCode"
+                        [(ngModel)]="cotizacion.areaCode" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.cotizacion.telefono" for="field_telefono">Telefono</label>
+                    <input type="text" class="form-control" name="telefono" id="field_telefono"
+                        [(ngModel)]="cotizacion.telefono" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.cotizacion.movil" for="field_movil">Movil</label>
+                    <input type="text" class="form-control" name="movil" id="field_movil"
+                        [(ngModel)]="cotizacion.movil" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.cotizacion.nacionalidad" for="field_nacionalidad">Nacionalidad</label>
+                    <input type="number" class="form-control" name="nacionalidad" id="field_nacionalidad"
+                        [(ngModel)]="cotizacion.nacionalidad" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.cotizacion.area" for="field_area">Area</label>
+                    <input type="text" class="form-control" name="area" id="field_area"
+                        [(ngModel)]="cotizacion.area" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.cotizacion.fechaViaje" for="field_fechaViaje">Fecha Viaje</label>
+                    <div class="input-group">
+                        <input id="field_fechaViaje" type="text" class="form-control" name="fechaViaje" ngbDatepicker  #fechaViajeDp="ngbDatepicker" [(ngModel)]="cotizacion.fechaViaje"
+                        />
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="fechaViajeDp.toggle()"><fa-icon [icon]="'calendar-alt'"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.cotizacion.programas" for="field_programas">Programas</label>
+                    <select class="form-control" id="field_programas" name="programas" [(ngModel)]="cotizacion.programas">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="programasOption.id === cotizacion.programas?.id ? cotizacion.programas : programasOption" *ngFor="let programasOption of programas; trackBy: trackProgramasById">{{programasOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

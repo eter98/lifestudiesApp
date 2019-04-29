@@ -1,0 +1,35 @@
+{
+    "name": "Ciudad",
+    "fields": [
+        {
+            "fieldName": "ciudadNombre",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "pais",
+            "otherEntityRelationshipName": "ciudad",
+            "relationshipName": "pais",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "institucion",
+            "otherEntityRelationshipName": "ciudad",
+            "relationshipName": "institucion",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20190429194946",
+    "entityTableName": "ciudad",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

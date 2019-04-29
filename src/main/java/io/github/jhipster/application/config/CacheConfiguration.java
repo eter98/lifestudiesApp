@@ -38,6 +38,15 @@ public class CacheConfiguration {
             cm.createCache(io.github.jhipster.application.domain.User.class.getName(), jcacheConfiguration);
             cm.createCache(io.github.jhipster.application.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(io.github.jhipster.application.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.Institucion.class.getName(), jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.Cotizacion.class.getName(), jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.PerfilUsuario.class.getName(), jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.Pais.class.getName(), jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.Ciudad.class.getName(), jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.TipoPrograma.class.getName(), jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.Programas.class.getName(), jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.ViabilidadVisa.class.getName(), jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.BlogContenido.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

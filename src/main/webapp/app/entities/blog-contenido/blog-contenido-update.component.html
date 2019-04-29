@@ -1,0 +1,161 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-blog-contenido-heading" jhiTranslate="lifestudiesApp.blogContenido.home.createOrEditLabel">Create or edit a Blog Contenido</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!blogContenido.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="blogContenido.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.blogContenido.nombre" for="field_nombre">Nombre</label>
+                    <input type="text" class="form-control" name="nombre" id="field_nombre"
+                        [(ngModel)]="blogContenido.nombre" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.blogContenido.apellido" for="field_apellido">Apellido</label>
+                    <input type="text" class="form-control" name="apellido" id="field_apellido"
+                        [(ngModel)]="blogContenido.apellido" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.blogContenido.correo" for="field_correo">Correo</label>
+                    <input type="text" class="form-control" name="correo" id="field_correo"
+                        [(ngModel)]="blogContenido.correo" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.blogContenido.nacionalidad" for="field_nacionalidad">Nacionalidad</label>
+                    <select class="form-control" name="nacionalidad" [(ngModel)]="blogContenido.nacionalidad" id="field_nacionalidad" >
+                        <option value="Argentina">{{'lifestudiesApp.Nacionalidadd.Argentina' | translate}}</option>
+                        <option value="Bolivia">{{'lifestudiesApp.Nacionalidadd.Bolivia' | translate}}</option>
+                        <option value="Brasil">{{'lifestudiesApp.Nacionalidadd.Brasil' | translate}}</option>
+                        <option value="Chile">{{'lifestudiesApp.Nacionalidadd.Chile' | translate}}</option>
+                        <option value="Colombia">{{'lifestudiesApp.Nacionalidadd.Colombia' | translate}}</option>
+                        <option value="Costa_Rica">{{'lifestudiesApp.Nacionalidadd.Costa_Rica' | translate}}</option>
+                        <option value="Ecuador">{{'lifestudiesApp.Nacionalidadd.Ecuador' | translate}}</option>
+                        <option value="Guatemala">{{'lifestudiesApp.Nacionalidadd.Guatemala' | translate}}</option>
+                        <option value="Honduras">{{'lifestudiesApp.Nacionalidadd.Honduras' | translate}}</option>
+                        <option value="Mexico">{{'lifestudiesApp.Nacionalidadd.Mexico' | translate}}</option>
+                        <option value="Nicaragua">{{'lifestudiesApp.Nacionalidadd.Nicaragua' | translate}}</option>
+                        <option value="Panama">{{'lifestudiesApp.Nacionalidadd.Panama' | translate}}</option>
+                        <option value="Paraguay">{{'lifestudiesApp.Nacionalidadd.Paraguay' | translate}}</option>
+                        <option value="Peru">{{'lifestudiesApp.Nacionalidadd.Peru' | translate}}</option>
+                        <option value="Uruguay">{{'lifestudiesApp.Nacionalidadd.Uruguay' | translate}}</option>
+                        <option value="Venezuela">{{'lifestudiesApp.Nacionalidadd.Venezuela' | translate}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.blogContenido.paisEstudio" for="field_paisEstudio">Pais Estudio</label>
+                    <select class="form-control" name="paisEstudio" [(ngModel)]="blogContenido.paisEstudio" id="field_paisEstudio" >
+                        <option value="ALEMANIA">{{'lifestudiesApp.Destinod.ALEMANIA' | translate}}</option>
+                        <option value="AUSTRALIA">{{'lifestudiesApp.Destinod.AUSTRALIA' | translate}}</option>
+                        <option value="CANADA">{{'lifestudiesApp.Destinod.CANADA' | translate}}</option>
+                        <option value="ESPANA">{{'lifestudiesApp.Destinod.ESPANA' | translate}}</option>
+                        <option value="ESTADOS_UNIDOS">{{'lifestudiesApp.Destinod.ESTADOS_UNIDOS' | translate}}</option>
+                        <option value="FRANCIA">{{'lifestudiesApp.Destinod.FRANCIA' | translate}}</option>
+                        <option value="INGLATERRA">{{'lifestudiesApp.Destinod.INGLATERRA' | translate}}</option>
+                        <option value="IRLANDA">{{'lifestudiesApp.Destinod.IRLANDA' | translate}}</option>
+                        <option value="ITALIA">{{'lifestudiesApp.Destinod.ITALIA' | translate}}</option>
+                        <option value="JAPON">{{'lifestudiesApp.Destinod.JAPON' | translate}}</option>
+                        <option value="MALTA">{{'lifestudiesApp.Destinod.MALTA' | translate}}</option>
+                        <option value="NUEVA_ZELANDA">{{'lifestudiesApp.Destinod.NUEVA_ZELANDA' | translate}}</option>
+                        <option value="SUDAFRICA">{{'lifestudiesApp.Destinod.SUDAFRICA' | translate}}</option>
+                        <option value="SUIZA">{{'lifestudiesApp.Destinod.SUIZA' | translate}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.blogContenido.calificacionPais" for="field_calificacionPais">Calificacion Pais</label>
+                    <input type="number" class="form-control" name="calificacionPais" id="field_calificacionPais"
+                        [(ngModel)]="blogContenido.calificacionPais" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.blogContenido.ciudadVive" for="field_ciudadVive">Ciudad Vive</label>
+                    <input type="text" class="form-control" name="ciudadVive" id="field_ciudadVive"
+                        [(ngModel)]="blogContenido.ciudadVive" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.blogContenido.calificacionCiudad" for="field_calificacionCiudad">Calificacion Ciudad</label>
+                    <input type="number" class="form-control" name="calificacionCiudad" id="field_calificacionCiudad"
+                        [(ngModel)]="blogContenido.calificacionCiudad" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.blogContenido.programaRealizado" for="field_programaRealizado">Programa Realizado</label>
+                    <select class="form-control" name="programaRealizado" [(ngModel)]="blogContenido.programaRealizado" id="field_programaRealizado" >
+                        <option value="PRIMARIA">{{'lifestudiesApp.NivelAcademicod.PRIMARIA' | translate}}</option>
+                        <option value="SECUNDARIA">{{'lifestudiesApp.NivelAcademicod.SECUNDARIA' | translate}}</option>
+                        <option value="PREGRADO">{{'lifestudiesApp.NivelAcademicod.PREGRADO' | translate}}</option>
+                        <option value="POSGRADO">{{'lifestudiesApp.NivelAcademicod.POSGRADO' | translate}}</option>
+                        <option value="DOCTORADO">{{'lifestudiesApp.NivelAcademicod.DOCTORADO' | translate}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.blogContenido.institucionEstudio" for="field_institucionEstudio">Institucion Estudio</label>
+                    <input type="text" class="form-control" name="institucionEstudio" id="field_institucionEstudio"
+                        [(ngModel)]="blogContenido.institucionEstudio" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.blogContenido.calificacionInstitucion" for="field_calificacionInstitucion">Calificacion Institucion</label>
+                    <input type="number" class="form-control" name="calificacionInstitucion" id="field_calificacionInstitucion"
+                        [(ngModel)]="blogContenido.calificacionInstitucion" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.blogContenido.agenciaEstudios" for="field_agenciaEstudios">Agencia Estudios</label>
+                    <input type="checkbox" class="form-control" name="agenciaEstudios" id="field_agenciaEstudios"
+                        [(ngModel)]="blogContenido.agenciaEstudios" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.blogContenido.nombreAgencia" for="field_nombreAgencia">Nombre Agencia</label>
+                    <input type="text" class="form-control" name="nombreAgencia" id="field_nombreAgencia"
+                        [(ngModel)]="blogContenido.nombreAgencia" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.blogContenido.calificacionAgencia" for="field_calificacionAgencia">Calificacion Agencia</label>
+                    <input type="number" class="form-control" name="calificacionAgencia" id="field_calificacionAgencia"
+                        [(ngModel)]="blogContenido.calificacionAgencia" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.blogContenido.calificacionExperienciaEstudio" for="field_calificacionExperienciaEstudio">Calificacion Experiencia Estudio</label>
+                    <input type="number" class="form-control" name="calificacionExperienciaEstudio" id="field_calificacionExperienciaEstudio"
+                        [(ngModel)]="blogContenido.calificacionExperienciaEstudio" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.blogContenido.titulo" for="field_titulo">Titulo</label>
+                    <input type="text" class="form-control" name="titulo" id="field_titulo"
+                        [(ngModel)]="blogContenido.titulo" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.blogContenido.contenido" for="field_contenido">Contenido</label>
+                    <textarea class="form-control" name="contenido" id="field_contenido"
+                        [(ngModel)]="blogContenido.contenido" ></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.blogContenido.imagen" for="field_imagen">Imagen</label>
+                    <div>
+                        <img [src]="'data:' + blogContenido.imagenContentType + ';base64,' + blogContenido.imagen" style="max-height: 100px;" *ngIf="blogContenido.imagen" alt="blogContenido image"/>
+                        <div *ngIf="blogContenido.imagen" class="form-text text-danger clearfix">
+                            <span class="pull-left">{{blogContenido.imagenContentType}}, {{byteSize(blogContenido.imagen)}}</span>
+                            <button type="button" (click)="clearInputImage('imagen', 'imagenContentType', 'fileImage')" class="btn btn-secondary btn-xs pull-right">
+                                <fa-icon [icon]="'times'"></fa-icon>
+                            </button>
+                        </div>
+                        <input type="file" id="file_imagen" (change)="setFileData($event, blogContenido, 'imagen', true)" accept="image/*" jhiTranslate="entity.action.addimage"/>
+                    </div>
+                    <input type="hidden" class="form-control" name="imagen" id="field_imagen"
+                        [(ngModel)]="blogContenido.imagen" />
+                    <input type="hidden" class="form-control" name="imagenContentType" id="field_imagenContentType"
+                        [(ngModel)]="blogContenido.imagenContentType" />
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

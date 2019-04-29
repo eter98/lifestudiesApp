@@ -1,0 +1,159 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="perfilUsuario">
+            <h2><span jhiTranslate="lifestudiesApp.perfilUsuario.detail.title">Perfil Usuario</span> {{perfilUsuario.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="lifestudiesApp.perfilUsuario.nombre">Nombre</span></dt>
+                <dd>
+                    <span>{{perfilUsuario.nombre}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.perfilUsuario.apellido">Apellido</span></dt>
+                <dd>
+                    <span>{{perfilUsuario.apellido}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.perfilUsuario.fechaNacimiento">Fecha Nacimiento</span></dt>
+                <dd>
+                    <span>{{perfilUsuario.fechaNacimiento}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.perfilUsuario.mail">Mail</span></dt>
+                <dd>
+                    <span>{{perfilUsuario.mail}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.perfilUsuario.area">Area</span></dt>
+                <dd>
+                    <span>{{perfilUsuario.area}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.perfilUsuario.telefono">Telefono</span></dt>
+                <dd>
+                    <span>{{perfilUsuario.telefono}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.perfilUsuario.nivelAcademico">Nivel Academico</span></dt>
+                <dd>
+                    <span>{{perfilUsuario.nivelAcademico}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.perfilUsuario.areaAcademica">Area Academica</span></dt>
+                <dd>
+                    <span>{{perfilUsuario.areaAcademica}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.perfilUsuario.terminoAcademico">Termino Academico</span></dt>
+                <dd>
+                    <span>{{perfilUsuario.terminoAcademico}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.perfilUsuario.puntajeICFES">Puntaje ICFES</span></dt>
+                <dd>
+                    <span>{{perfilUsuario.puntajeICFES}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.perfilUsuario.promedioAcademico">Promedio Academico</span></dt>
+                <dd>
+                    <span>{{perfilUsuario.promedioAcademico}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.perfilUsuario.dominioIdioma">Dominio Idioma</span></dt>
+                <dd>
+                    <span>{{perfilUsuario.dominioIdioma}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.perfilUsuario.idiomas">Idiomas</span></dt>
+                <dd>
+                    <span>{{perfilUsuario.idiomas}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.perfilUsuario.examenIdioma">Examen Idioma</span></dt>
+                <dd>
+                    <span>{{perfilUsuario.examenIdioma}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.perfilUsuario.examenRealizado">Examen Realizado</span></dt>
+                <dd>
+                    <span>{{perfilUsuario.examenRealizado}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.perfilUsuario.puntajeIdioma">Puntaje Idioma</span></dt>
+                <dd>
+                    <span>{{perfilUsuario.puntajeIdioma}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.perfilUsuario.becaOtorgada">Beca Otorgada</span></dt>
+                <dd>
+                    <span>{{perfilUsuario.becaOtorgada}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.perfilUsuario.tipoBeca">Tipo Beca</span></dt>
+                <dd>
+                    <span>{{perfilUsuario.tipoBeca}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.perfilUsuario.becaInstitucion">Beca Institucion</span></dt>
+                <dd>
+                    <span>{{perfilUsuario.becaInstitucion}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.perfilUsuario.grupoSocial">Grupo Social</span></dt>
+                <dd>
+                    <span>{{perfilUsuario.grupoSocial}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.perfilUsuario.fundacion">Fundacion</span></dt>
+                <dd>
+                    <span>{{perfilUsuario.fundacion}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.perfilUsuario.monitor">Monitor</span></dt>
+                <dd>
+                    <span>{{perfilUsuario.monitor}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.perfilUsuario.monitorMateria">Monitor Materia</span></dt>
+                <dd>
+                    <span>{{perfilUsuario.monitorMateria}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.perfilUsuario.logrosAcademicos">Logros Academicos</span></dt>
+                <dd>
+                    <span>{{perfilUsuario.logrosAcademicos}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.perfilUsuario.experienciaLaboral">Experiencia Laboral</span></dt>
+                <dd>
+                    <span>{{perfilUsuario.experienciaLaboral}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.perfilUsuario.areaLaboral">Area Laboral</span></dt>
+                <dd>
+                    <span>{{perfilUsuario.areaLaboral}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.perfilUsuario.programarealizar">Programarealizar</span></dt>
+                <dd>
+                    <span>{{perfilUsuario.programarealizar}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.perfilUsuario.programaArea">Programa Area</span></dt>
+                <dd>
+                    <span>{{perfilUsuario.programaArea}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.perfilUsuario.fechaInicio">Fecha Inicio</span></dt>
+                <dd>
+                    <span>{{perfilUsuario.fechaInicio}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.perfilUsuario.programaEncontrado">Programa Encontrado</span></dt>
+                <dd>
+                    <span>{{perfilUsuario.programaEncontrado}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.perfilUsuario.nombrePrograma">Nombre Programa</span></dt>
+                <dd>
+                    <span>{{perfilUsuario.nombrePrograma}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.perfilUsuario.universidad">Universidad</span></dt>
+                <dd>
+                    <span>{{perfilUsuario.universidad}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.perfilUsuario.pais">Pais</span></dt>
+                <dd>
+                    <span>{{perfilUsuario.pais}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.perfilUsuario.merecedorBeca">Merecedor Beca</span></dt>
+                <dd>
+                    <span>{{perfilUsuario.merecedorBeca}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/perfil-usuario', perfilUsuario.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

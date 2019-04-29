@@ -1,0 +1,30 @@
+{
+    "lifestudiesApp": {
+        "cotizacion": {
+            "home": {
+                "title": "Cotizacions",
+                "createLabel": "Create a new Cotizacion",
+                "createOrEditLabel": "Create or edit a Cotizacion"
+            },
+            "created": "A new Cotizacion is created with identifier {{ param }}",
+            "updated": "A Cotizacion is updated with identifier {{ param }}",
+            "deleted": "A Cotizacion is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Cotizacion {{ id }}?"
+            },
+            "detail": {
+                "title": "Cotizacion"
+            },
+            "nombre": "Nombre",
+            "apellido": "Apellido",
+            "mail": "Mail",
+            "areaCode": "Area Code",
+            "telefono": "Telefono",
+            "movil": "Movil",
+            "nacionalidad": "Nacionalidad",
+            "area": "Area",
+            "fechaViaje": "Fecha Viaje",
+            "programas": "Programas"
+        }
+    }
+}

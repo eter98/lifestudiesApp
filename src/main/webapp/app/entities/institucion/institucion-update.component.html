@@ -1,0 +1,246 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-institucion-heading" jhiTranslate="lifestudiesApp.institucion.home.createOrEditLabel">Create or edit a Institucion</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!institucion.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="institucion.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.institucion.nombre" for="field_nombre">Nombre</label>
+                    <input type="text" class="form-control" name="nombre" id="field_nombre"
+                        [(ngModel)]="institucion.nombre" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.institucion.tipo" for="field_tipo">Tipo</label>
+                    <input type="number" class="form-control" name="tipo" id="field_tipo"
+                        [(ngModel)]="institucion.tipo" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.institucion.webSite" for="field_webSite">Web Site</label>
+                    <input type="text" class="form-control" name="webSite" id="field_webSite"
+                        [(ngModel)]="institucion.webSite" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.institucion.prefixNombre" for="field_prefixNombre">Prefix Nombre</label>
+                    <input type="text" class="form-control" name="prefixNombre" id="field_prefixNombre"
+                        [(ngModel)]="institucion.prefixNombre" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.institucion.nombreResponsable" for="field_nombreResponsable">Nombre Responsable</label>
+                    <input type="text" class="form-control" name="nombreResponsable" id="field_nombreResponsable"
+                        [(ngModel)]="institucion.nombreResponsable" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.institucion.apellidoResponsable" for="field_apellidoResponsable">Apellido Responsable</label>
+                    <input type="text" class="form-control" name="apellidoResponsable" id="field_apellidoResponsable"
+                        [(ngModel)]="institucion.apellidoResponsable" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.institucion.mail" for="field_mail">Mail</label>
+                    <input type="text" class="form-control" name="mail" id="field_mail"
+                        [(ngModel)]="institucion.mail" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.institucion.areaCode" for="field_areaCode">Area Code</label>
+                    <input type="text" class="form-control" name="areaCode" id="field_areaCode"
+                        [(ngModel)]="institucion.areaCode" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.institucion.telefono" for="field_telefono">Telefono</label>
+                    <input type="text" class="form-control" name="telefono" id="field_telefono"
+                        [(ngModel)]="institucion.telefono" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.institucion.movil" for="field_movil">Movil</label>
+                    <input type="text" class="form-control" name="movil" id="field_movil"
+                        [(ngModel)]="institucion.movil" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.institucion.skype" for="field_skype">Skype</label>
+                    <input type="text" class="form-control" name="skype" id="field_skype"
+                        [(ngModel)]="institucion.skype" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.institucion.direccion" for="field_direccion">Direccion</label>
+                    <input type="text" class="form-control" name="direccion" id="field_direccion"
+                        [(ngModel)]="institucion.direccion" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.institucion.direccion2" for="field_direccion2">Direccion 2</label>
+                    <input type="text" class="form-control" name="direccion2" id="field_direccion2"
+                        [(ngModel)]="institucion.direccion2" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.institucion.estado" for="field_estado">Estado</label>
+                    <input type="text" class="form-control" name="estado" id="field_estado"
+                        [(ngModel)]="institucion.estado" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.institucion.zipCode" for="field_zipCode">Zip Code</label>
+                    <input type="text" class="form-control" name="zipCode" id="field_zipCode"
+                        [(ngModel)]="institucion.zipCode" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.institucion.mailCorporativo" for="field_mailCorporativo">Mail Corporativo</label>
+                    <input type="text" class="form-control" name="mailCorporativo" id="field_mailCorporativo"
+                        [(ngModel)]="institucion.mailCorporativo" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.institucion.movilCorporativo" for="field_movilCorporativo">Movil Corporativo</label>
+                    <input type="text" class="form-control" name="movilCorporativo" id="field_movilCorporativo"
+                        [(ngModel)]="institucion.movilCorporativo" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.institucion.skypeCorporativo" for="field_skypeCorporativo">Skype Corporativo</label>
+                    <input type="text" class="form-control" name="skypeCorporativo" id="field_skypeCorporativo"
+                        [(ngModel)]="institucion.skypeCorporativo" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.institucion.logo" for="field_logo">Logo</label>
+                    <div>
+                        <img [src]="'data:' + institucion.logoContentType + ';base64,' + institucion.logo" style="max-height: 100px;" *ngIf="institucion.logo" alt="institucion image"/>
+                        <div *ngIf="institucion.logo" class="form-text text-danger clearfix">
+                            <span class="pull-left">{{institucion.logoContentType}}, {{byteSize(institucion.logo)}}</span>
+                            <button type="button" (click)="clearInputImage('logo', 'logoContentType', 'fileImage')" class="btn btn-secondary btn-xs pull-right">
+                                <fa-icon [icon]="'times'"></fa-icon>
+                            </button>
+                        </div>
+                        <input type="file" id="file_logo" (change)="setFileData($event, institucion, 'logo', true)" accept="image/*" jhiTranslate="entity.action.addimage"/>
+                    </div>
+                    <input type="hidden" class="form-control" name="logo" id="field_logo"
+                        [(ngModel)]="institucion.logo" />
+                    <input type="hidden" class="form-control" name="logoContentType" id="field_logoContentType"
+                        [(ngModel)]="institucion.logoContentType" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.institucion.imagen" for="field_imagen">Imagen</label>
+                    <div>
+                        <img [src]="'data:' + institucion.imagenContentType + ';base64,' + institucion.imagen" style="max-height: 100px;" *ngIf="institucion.imagen" alt="institucion image"/>
+                        <div *ngIf="institucion.imagen" class="form-text text-danger clearfix">
+                            <span class="pull-left">{{institucion.imagenContentType}}, {{byteSize(institucion.imagen)}}</span>
+                            <button type="button" (click)="clearInputImage('imagen', 'imagenContentType', 'fileImage')" class="btn btn-secondary btn-xs pull-right">
+                                <fa-icon [icon]="'times'"></fa-icon>
+                            </button>
+                        </div>
+                        <input type="file" id="file_imagen" (change)="setFileData($event, institucion, 'imagen', true)" accept="image/*" jhiTranslate="entity.action.addimage"/>
+                    </div>
+                    <input type="hidden" class="form-control" name="imagen" id="field_imagen"
+                        [(ngModel)]="institucion.imagen" />
+                    <input type="hidden" class="form-control" name="imagenContentType" id="field_imagenContentType"
+                        [(ngModel)]="institucion.imagenContentType" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.institucion.imagen2" for="field_imagen2">Imagen 2</label>
+                    <div>
+                        <img [src]="'data:' + institucion.imagen2ContentType + ';base64,' + institucion.imagen2" style="max-height: 100px;" *ngIf="institucion.imagen2" alt="institucion image"/>
+                        <div *ngIf="institucion.imagen2" class="form-text text-danger clearfix">
+                            <span class="pull-left">{{institucion.imagen2ContentType}}, {{byteSize(institucion.imagen2)}}</span>
+                            <button type="button" (click)="clearInputImage('imagen2', 'imagen2ContentType', 'fileImage')" class="btn btn-secondary btn-xs pull-right">
+                                <fa-icon [icon]="'times'"></fa-icon>
+                            </button>
+                        </div>
+                        <input type="file" id="file_imagen2" (change)="setFileData($event, institucion, 'imagen2', true)" accept="image/*" jhiTranslate="entity.action.addimage"/>
+                    </div>
+                    <input type="hidden" class="form-control" name="imagen2" id="field_imagen2"
+                        [(ngModel)]="institucion.imagen2" />
+                    <input type="hidden" class="form-control" name="imagen2ContentType" id="field_imagen2ContentType"
+                        [(ngModel)]="institucion.imagen2ContentType" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.institucion.imagen3" for="field_imagen3">Imagen 3</label>
+                    <div>
+                        <img [src]="'data:' + institucion.imagen3ContentType + ';base64,' + institucion.imagen3" style="max-height: 100px;" *ngIf="institucion.imagen3" alt="institucion image"/>
+                        <div *ngIf="institucion.imagen3" class="form-text text-danger clearfix">
+                            <span class="pull-left">{{institucion.imagen3ContentType}}, {{byteSize(institucion.imagen3)}}</span>
+                            <button type="button" (click)="clearInputImage('imagen3', 'imagen3ContentType', 'fileImage')" class="btn btn-secondary btn-xs pull-right">
+                                <fa-icon [icon]="'times'"></fa-icon>
+                            </button>
+                        </div>
+                        <input type="file" id="file_imagen3" (change)="setFileData($event, institucion, 'imagen3', true)" accept="image/*" jhiTranslate="entity.action.addimage"/>
+                    </div>
+                    <input type="hidden" class="form-control" name="imagen3" id="field_imagen3"
+                        [(ngModel)]="institucion.imagen3" />
+                    <input type="hidden" class="form-control" name="imagen3ContentType" id="field_imagen3ContentType"
+                        [(ngModel)]="institucion.imagen3ContentType" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.institucion.imagen4" for="field_imagen4">Imagen 4</label>
+                    <div>
+                        <img [src]="'data:' + institucion.imagen4ContentType + ';base64,' + institucion.imagen4" style="max-height: 100px;" *ngIf="institucion.imagen4" alt="institucion image"/>
+                        <div *ngIf="institucion.imagen4" class="form-text text-danger clearfix">
+                            <span class="pull-left">{{institucion.imagen4ContentType}}, {{byteSize(institucion.imagen4)}}</span>
+                            <button type="button" (click)="clearInputImage('imagen4', 'imagen4ContentType', 'fileImage')" class="btn btn-secondary btn-xs pull-right">
+                                <fa-icon [icon]="'times'"></fa-icon>
+                            </button>
+                        </div>
+                        <input type="file" id="file_imagen4" (change)="setFileData($event, institucion, 'imagen4', true)" accept="image/*" jhiTranslate="entity.action.addimage"/>
+                    </div>
+                    <input type="hidden" class="form-control" name="imagen4" id="field_imagen4"
+                        [(ngModel)]="institucion.imagen4" />
+                    <input type="hidden" class="form-control" name="imagen4ContentType" id="field_imagen4ContentType"
+                        [(ngModel)]="institucion.imagen4ContentType" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.institucion.imagen5" for="field_imagen5">Imagen 5</label>
+                    <div>
+                        <img [src]="'data:' + institucion.imagen5ContentType + ';base64,' + institucion.imagen5" style="max-height: 100px;" *ngIf="institucion.imagen5" alt="institucion image"/>
+                        <div *ngIf="institucion.imagen5" class="form-text text-danger clearfix">
+                            <span class="pull-left">{{institucion.imagen5ContentType}}, {{byteSize(institucion.imagen5)}}</span>
+                            <button type="button" (click)="clearInputImage('imagen5', 'imagen5ContentType', 'fileImage')" class="btn btn-secondary btn-xs pull-right">
+                                <fa-icon [icon]="'times'"></fa-icon>
+                            </button>
+                        </div>
+                        <input type="file" id="file_imagen5" (change)="setFileData($event, institucion, 'imagen5', true)" accept="image/*" jhiTranslate="entity.action.addimage"/>
+                    </div>
+                    <input type="hidden" class="form-control" name="imagen5" id="field_imagen5"
+                        [(ngModel)]="institucion.imagen5" />
+                    <input type="hidden" class="form-control" name="imagen5ContentType" id="field_imagen5ContentType"
+                        [(ngModel)]="institucion.imagen5ContentType" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.institucion.video" for="field_video">Video</label>
+                    <div>
+                        <div *ngIf="institucion.video" class="form-text text-danger clearfix">
+                            <a class="pull-left" (click)="openFile(institucion.videoContentType, institucion.video)" jhiTranslate="entity.action.open">open</a><br>
+                            <span class="pull-left">{{institucion.videoContentType}}, {{byteSize(institucion.video)}}</span>
+                            <button type="button" (click)="institucion.video=null;institucion.videoContentType=null;"
+                                    class="btn btn-secondary btn-xs pull-right">
+                                <fa-icon [icon]="'times'"></fa-icon>
+                            </button>
+                        </div>
+                        <input type="file" id="file_video" (change)="setFileData($event, institucion, 'video', false)" jhiTranslate="entity.action.addblob"/>
+                    </div>
+                    <input type="hidden" class="form-control" name="video" id="field_video"
+                        [(ngModel)]="institucion.video" />
+                    <input type="hidden" class="form-control" name="videoContentType" id="field_videoContentType"
+                        [(ngModel)]="institucion.videoContentType" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.institucion.descripcion" for="field_descripcion">Descripcion</label>
+                    <textarea class="form-control" name="descripcion" id="field_descripcion"
+                        [(ngModel)]="institucion.descripcion" ></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.institucion.ciudad" for="field_ciudad">Ciudad</label>
+                    <select class="form-control" id="field_ciudad" name="ciudad" [(ngModel)]="institucion.ciudad">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="ciudadOption.id === institucion.ciudad?.id ? institucion.ciudad : ciudadOption" *ngFor="let ciudadOption of ciudads; trackBy: trackCiudadById">{{ciudadOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

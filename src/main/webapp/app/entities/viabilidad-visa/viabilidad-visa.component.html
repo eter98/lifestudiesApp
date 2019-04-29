@@ -1,0 +1,146 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="lifestudiesApp.viabilidadVisa.home.title">Viabilidad Visas</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-viabilidad-visa" [routerLink]="['/viabilidad-visa/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="lifestudiesApp.viabilidadVisa.home.createLabel">
+            Create new Viabilidad Visa
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="viabilidadVisas">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.destino">Destino</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.tipoPrograma">Tipo Programa</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.duracion">Duracion</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.nacionalidadPrincipal">Nacionalidad Principal</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.otraNacionalidad">Otra Nacionalidad</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.fechaNacimiento">Fecha Nacimiento</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.genero">Genero</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.estadoCivil">Estado Civil</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.viajaAcompanado">Viaja Acompanado</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.personasCargo">Personas Cargo</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.nivelAcademico">Nivel Academico</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.profesion">Profesion</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.fechaGadruacion">Fecha Gadruacion</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.ocupacionActual">Ocupacion Actual</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.carta">Carta</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.suspendidoEstudios">Suspendido Estudios</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.peridoSupencionEstu">Perido Supencion Estu</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.razonSuspencion">Razon Suspencion</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.tipoContrato">Tipo Contrato</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.licenciaLaboral">Licencia Laboral</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.nivelSalarial">Nivel Salarial</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.tipoLaborIndependiente">Tipo Labor Independiente</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.tiempoIndependiente">Tiempo Independiente</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.nivelIngresosIndependiente">Nivel Ingresos Independiente</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.tiempoDesempleado">Tiempo Desempleado</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.quienFinanciaEstudios">Quien Financia Estudios</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.parentesco">Parentesco</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.presupuestoDisponible">Presupuesto Disponible</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.ahorroDisponible">Ahorro Disponible</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.idioma">Idioma</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.certificarIdioma">Certificar Idioma</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.certificacionIdioma">Certificacion Idioma</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.puntajeCertificacion">Puntaje Certificacion</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.salidasPais">Salidas Pais</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.paisesVisitados">Paises Visitados</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.visaPais">Visa Pais</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.estudiadoAnterior">Estudiado Anterior</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.fueraPais">Fuera Pais</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.paisFuera">Pais Fuera</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.extenderEstadia">Extender Estadia</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.negadoVisa">Negado Visa</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.paisNegado">Pais Negado</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.familiaresDestino">Familiares Destino</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.estatusMigratorio">Estatus Migratorio</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.nombre">Nombre</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.apelliod">Apelliod</span></th>
+            <th><span jhiTranslate="lifestudiesApp.viabilidadVisa.correo">Correo</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let viabilidadVisa of viabilidadVisas ;trackBy: trackId">
+                <td><a [routerLink]="['/viabilidad-visa', viabilidadVisa.id, 'view' ]">{{viabilidadVisa.id}}</a></td>
+                <td jhiTranslate="{{'lifestudiesApp.Destinod.' + viabilidadVisa.destino}}">{{viabilidadVisa.destino}}</td>
+                <td jhiTranslate="{{'lifestudiesApp.TipoProgramad.' + viabilidadVisa.tipoPrograma}}">{{viabilidadVisa.tipoPrograma}}</td>
+                <td jhiTranslate="{{'lifestudiesApp.Duraciond.' + viabilidadVisa.duracion}}">{{viabilidadVisa.duracion}}</td>
+                <td jhiTranslate="{{'lifestudiesApp.Nacionalidadd.' + viabilidadVisa.nacionalidadPrincipal}}">{{viabilidadVisa.nacionalidadPrincipal}}</td>
+                <td jhiTranslate="{{'lifestudiesApp.Nacionalidadd.' + viabilidadVisa.otraNacionalidad}}">{{viabilidadVisa.otraNacionalidad}}</td>
+                <td>{{viabilidadVisa.fechaNacimiento | date:'mediumDate'}}</td>
+                <td jhiTranslate="{{'lifestudiesApp.Generod.' + viabilidadVisa.genero}}">{{viabilidadVisa.genero}}</td>
+                <td jhiTranslate="{{'lifestudiesApp.EstadoCivild.' + viabilidadVisa.estadoCivil}}">{{viabilidadVisa.estadoCivil}}</td>
+                <td>{{viabilidadVisa.viajaAcompanado}}</td>
+                <td jhiTranslate="{{'lifestudiesApp.PersonasCargod.' + viabilidadVisa.personasCargo}}">{{viabilidadVisa.personasCargo}}</td>
+                <td jhiTranslate="{{'lifestudiesApp.NivelAcademicod.' + viabilidadVisa.nivelAcademico}}">{{viabilidadVisa.nivelAcademico}}</td>
+                <td>{{viabilidadVisa.profesion}}</td>
+                <td>{{viabilidadVisa.fechaGadruacion | date:'mediumDate'}}</td>
+                <td jhiTranslate="{{'lifestudiesApp.OcupacionActuald.' + viabilidadVisa.ocupacionActual}}">{{viabilidadVisa.ocupacionActual}}</td>
+                <td>{{viabilidadVisa.carta}}</td>
+                <td>{{viabilidadVisa.suspendidoEstudios}}</td>
+                <td jhiTranslate="{{'lifestudiesApp.PeridoSupencionEstud.' + viabilidadVisa.peridoSupencionEstu}}">{{viabilidadVisa.peridoSupencionEstu}}</td>
+                <td>{{viabilidadVisa.razonSuspencion}}</td>
+                <td jhiTranslate="{{'lifestudiesApp.TipoContratod.' + viabilidadVisa.tipoContrato}}">{{viabilidadVisa.tipoContrato}}</td>
+                <td>{{viabilidadVisa.licenciaLaboral}}</td>
+                <td jhiTranslate="{{'lifestudiesApp.NivelSalariald.' + viabilidadVisa.nivelSalarial}}">{{viabilidadVisa.nivelSalarial}}</td>
+                <td jhiTranslate="{{'lifestudiesApp.TipoLaborIndependiented.' + viabilidadVisa.tipoLaborIndependiente}}">{{viabilidadVisa.tipoLaborIndependiente}}</td>
+                <td jhiTranslate="{{'lifestudiesApp.PeridoSupencionEstud.' + viabilidadVisa.tiempoIndependiente}}">{{viabilidadVisa.tiempoIndependiente}}</td>
+                <td jhiTranslate="{{'lifestudiesApp.NivelSalariald.' + viabilidadVisa.nivelIngresosIndependiente}}">{{viabilidadVisa.nivelIngresosIndependiente}}</td>
+                <td jhiTranslate="{{'lifestudiesApp.PeridoSupencionEstud.' + viabilidadVisa.tiempoDesempleado}}">{{viabilidadVisa.tiempoDesempleado}}</td>
+                <td jhiTranslate="{{'lifestudiesApp.QuienFinanciaEstudiosd.' + viabilidadVisa.quienFinanciaEstudios}}">{{viabilidadVisa.quienFinanciaEstudios}}</td>
+                <td jhiTranslate="{{'lifestudiesApp.Parentescod.' + viabilidadVisa.parentesco}}">{{viabilidadVisa.parentesco}}</td>
+                <td jhiTranslate="{{'lifestudiesApp.NivelSalariald.' + viabilidadVisa.presupuestoDisponible}}">{{viabilidadVisa.presupuestoDisponible}}</td>
+                <td>{{viabilidadVisa.ahorroDisponible}}</td>
+                <td>{{viabilidadVisa.idioma}}</td>
+                <td>{{viabilidadVisa.certificarIdioma}}</td>
+                <td>{{viabilidadVisa.certificacionIdioma}}</td>
+                <td>{{viabilidadVisa.puntajeCertificacion}}</td>
+                <td>{{viabilidadVisa.salidasPais}}</td>
+                <td>{{viabilidadVisa.paisesVisitados}}</td>
+                <td>{{viabilidadVisa.visaPais}}</td>
+                <td>{{viabilidadVisa.estudiadoAnterior}}</td>
+                <td>{{viabilidadVisa.fueraPais}}</td>
+                <td>{{viabilidadVisa.paisFuera}}</td>
+                <td>{{viabilidadVisa.extenderEstadia}}</td>
+                <td>{{viabilidadVisa.negadoVisa}}</td>
+                <td>{{viabilidadVisa.paisNegado}}</td>
+                <td>{{viabilidadVisa.familiaresDestino}}</td>
+                <td>{{viabilidadVisa.estatusMigratorio}}</td>
+                <td>{{viabilidadVisa.nombre}}</td>
+                <td>{{viabilidadVisa.apelliod}}</td>
+                <td>{{viabilidadVisa.correo}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['/viabilidad-visa', viabilidadVisa.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/viabilidad-visa', viabilidadVisa.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'viabilidad-visa', { outlets: { popup: viabilidadVisa.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
