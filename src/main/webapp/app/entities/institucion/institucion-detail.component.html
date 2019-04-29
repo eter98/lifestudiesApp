@@ -1,0 +1,166 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="institucion">
+            <h2><span jhiTranslate="lifestudiesApp.institucion.detail.title">Institucion</span> {{institucion.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="lifestudiesApp.institucion.nombre">Nombre</span></dt>
+                <dd>
+                    <span>{{institucion.nombre}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.institucion.tipo">Tipo</span></dt>
+                <dd>
+                    <span>{{institucion.tipo}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.institucion.webSite">Web Site</span></dt>
+                <dd>
+                    <span>{{institucion.webSite}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.institucion.prefixNombre">Prefix Nombre</span></dt>
+                <dd>
+                    <span>{{institucion.prefixNombre}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.institucion.nombreResponsable">Nombre Responsable</span></dt>
+                <dd>
+                    <span>{{institucion.nombreResponsable}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.institucion.apellidoResponsable">Apellido Responsable</span></dt>
+                <dd>
+                    <span>{{institucion.apellidoResponsable}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.institucion.mail">Mail</span></dt>
+                <dd>
+                    <span>{{institucion.mail}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.institucion.areaCode">Area Code</span></dt>
+                <dd>
+                    <span>{{institucion.areaCode}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.institucion.telefono">Telefono</span></dt>
+                <dd>
+                    <span>{{institucion.telefono}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.institucion.movil">Movil</span></dt>
+                <dd>
+                    <span>{{institucion.movil}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.institucion.skype">Skype</span></dt>
+                <dd>
+                    <span>{{institucion.skype}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.institucion.direccion">Direccion</span></dt>
+                <dd>
+                    <span>{{institucion.direccion}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.institucion.direccion2">Direccion 2</span></dt>
+                <dd>
+                    <span>{{institucion.direccion2}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.institucion.estado">Estado</span></dt>
+                <dd>
+                    <span>{{institucion.estado}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.institucion.zipCode">Zip Code</span></dt>
+                <dd>
+                    <span>{{institucion.zipCode}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.institucion.mailCorporativo">Mail Corporativo</span></dt>
+                <dd>
+                    <span>{{institucion.mailCorporativo}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.institucion.movilCorporativo">Movil Corporativo</span></dt>
+                <dd>
+                    <span>{{institucion.movilCorporativo}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.institucion.skypeCorporativo">Skype Corporativo</span></dt>
+                <dd>
+                    <span>{{institucion.skypeCorporativo}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.institucion.logo">Logo</span></dt>
+                <dd>
+                    <div *ngIf="institucion.logo">
+                        <a (click)="openFile(institucion.logoContentType, institucion.logo)">
+                            <img [src]="'data:' + institucion.logoContentType + ';base64,' + institucion.logo" style="max-width: 100%;" alt="institucion image"/>
+                        </a>
+                        {{institucion.logoContentType}}, {{byteSize(institucion.logo)}}
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.institucion.imagen">Imagen</span></dt>
+                <dd>
+                    <div *ngIf="institucion.imagen">
+                        <a (click)="openFile(institucion.imagenContentType, institucion.imagen)">
+                            <img [src]="'data:' + institucion.imagenContentType + ';base64,' + institucion.imagen" style="max-width: 100%;" alt="institucion image"/>
+                        </a>
+                        {{institucion.imagenContentType}}, {{byteSize(institucion.imagen)}}
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.institucion.imagen2">Imagen 2</span></dt>
+                <dd>
+                    <div *ngIf="institucion.imagen2">
+                        <a (click)="openFile(institucion.imagen2ContentType, institucion.imagen2)">
+                            <img [src]="'data:' + institucion.imagen2ContentType + ';base64,' + institucion.imagen2" style="max-width: 100%;" alt="institucion image"/>
+                        </a>
+                        {{institucion.imagen2ContentType}}, {{byteSize(institucion.imagen2)}}
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.institucion.imagen3">Imagen 3</span></dt>
+                <dd>
+                    <div *ngIf="institucion.imagen3">
+                        <a (click)="openFile(institucion.imagen3ContentType, institucion.imagen3)">
+                            <img [src]="'data:' + institucion.imagen3ContentType + ';base64,' + institucion.imagen3" style="max-width: 100%;" alt="institucion image"/>
+                        </a>
+                        {{institucion.imagen3ContentType}}, {{byteSize(institucion.imagen3)}}
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.institucion.imagen4">Imagen 4</span></dt>
+                <dd>
+                    <div *ngIf="institucion.imagen4">
+                        <a (click)="openFile(institucion.imagen4ContentType, institucion.imagen4)">
+                            <img [src]="'data:' + institucion.imagen4ContentType + ';base64,' + institucion.imagen4" style="max-width: 100%;" alt="institucion image"/>
+                        </a>
+                        {{institucion.imagen4ContentType}}, {{byteSize(institucion.imagen4)}}
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.institucion.imagen5">Imagen 5</span></dt>
+                <dd>
+                    <div *ngIf="institucion.imagen5">
+                        <a (click)="openFile(institucion.imagen5ContentType, institucion.imagen5)">
+                            <img [src]="'data:' + institucion.imagen5ContentType + ';base64,' + institucion.imagen5" style="max-width: 100%;" alt="institucion image"/>
+                        </a>
+                        {{institucion.imagen5ContentType}}, {{byteSize(institucion.imagen5)}}
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.institucion.video">Video</span></dt>
+                <dd>
+                    <div *ngIf="institucion.video">
+                        <a (click)="openFile(institucion.videoContentType, institucion.video)" jhiTranslate="entity.action.open">open</a>
+                        {{institucion.videoContentType}}, {{byteSize(institucion.video)}}
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.institucion.descripcion">Descripcion</span></dt>
+                <dd>
+                    <span>{{institucion.descripcion}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.institucion.ciudad">Ciudad</span></dt>
+                <dd>
+                    <div *ngIf="institucion.ciudad">
+                        <a [routerLink]="['/ciudad', institucion.ciudad?.id, 'view']">{{institucion.ciudad?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/institucion', institucion.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

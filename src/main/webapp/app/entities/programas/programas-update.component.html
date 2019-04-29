@@ -1,0 +1,64 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-programas-heading" jhiTranslate="lifestudiesApp.programas.home.createOrEditLabel">Create or edit a Programas</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!programas.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="programas.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.programas.programaNombre" for="field_programaNombre">Programa Nombre</label>
+                    <input type="text" class="form-control" name="programaNombre" id="field_programaNombre"
+                        [(ngModel)]="programas.programaNombre" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.programas.duracion" for="field_duracion">Duracion</label>
+                    <select class="form-control" name="duracion" [(ngModel)]="programas.duracion" id="field_duracion" >
+                        <option value="UN_MES">{{'lifestudiesApp.Duraciond.UN_MES' | translate}}</option>
+                        <option value="DOS_MESES">{{'lifestudiesApp.Duraciond.DOS_MESES' | translate}}</option>
+                        <option value="TRES_MESES">{{'lifestudiesApp.Duraciond.TRES_MESES' | translate}}</option>
+                        <option value="CUATRO_MESES">{{'lifestudiesApp.Duraciond.CUATRO_MESES' | translate}}</option>
+                        <option value="CINCO_MESES">{{'lifestudiesApp.Duraciond.CINCO_MESES' | translate}}</option>
+                        <option value="SEIS_MESES">{{'lifestudiesApp.Duraciond.SEIS_MESES' | translate}}</option>
+                        <option value="SIETE_MESES">{{'lifestudiesApp.Duraciond.SIETE_MESES' | translate}}</option>
+                        <option value="OCHO_MESES">{{'lifestudiesApp.Duraciond.OCHO_MESES' | translate}}</option>
+                        <option value="NUEVE_MESES">{{'lifestudiesApp.Duraciond.NUEVE_MESES' | translate}}</option>
+                        <option value="DIEZ_MESES">{{'lifestudiesApp.Duraciond.DIEZ_MESES' | translate}}</option>
+                        <option value="ONCE_MESES">{{'lifestudiesApp.Duraciond.ONCE_MESES' | translate}}</option>
+                        <option value="DOCE_MESES">{{'lifestudiesApp.Duraciond.DOCE_MESES' | translate}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.programas.tipo" for="field_tipo">Tipo</label>
+                    <select class="form-control" name="tipo" [(ngModel)]="programas.tipo" id="field_tipo" >
+                        <option value="Programas_Idiomas">{{'lifestudiesApp.TipoProgramad.Programas_Idiomas' | translate}}</option>
+                        <option value="Curso_Verano_idiomas">{{'lifestudiesApp.TipoProgramad.Curso_Verano_idiomas' | translate}}</option>
+                        <option value="Programa_preparacion_Examenes_idioma">{{'lifestudiesApp.TipoProgramad.Programa_preparacion_Examenes_idioma' | translate}}</option>
+                        <option value="Programa_Pregrado">{{'lifestudiesApp.TipoProgramad.Programa_Pregrado' | translate}}</option>
+                        <option value="Programa_Posgrado">{{'lifestudiesApp.TipoProgramad.Programa_Posgrado' | translate}}</option>
+                        <option value="Programas_Cortos_Ejecutivos">{{'lifestudiesApp.TipoProgramad.Programas_Cortos_Ejecutivos' | translate}}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.programas.institucion" for="field_institucion">Institucion</label>
+                    <select class="form-control" id="field_institucion" name="institucion" [(ngModel)]="programas.institucion">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="institucionOption.id === programas.institucion?.id ? programas.institucion : institucionOption" *ngFor="let institucionOption of institucions; trackBy: trackInstitucionById">{{institucionOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

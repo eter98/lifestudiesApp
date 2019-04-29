@@ -1,0 +1,65 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="cotizacion">
+            <h2><span jhiTranslate="lifestudiesApp.cotizacion.detail.title">Cotizacion</span> {{cotizacion.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="lifestudiesApp.cotizacion.nombre">Nombre</span></dt>
+                <dd>
+                    <span>{{cotizacion.nombre}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.cotizacion.apellido">Apellido</span></dt>
+                <dd>
+                    <span>{{cotizacion.apellido}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.cotizacion.mail">Mail</span></dt>
+                <dd>
+                    <span>{{cotizacion.mail}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.cotizacion.areaCode">Area Code</span></dt>
+                <dd>
+                    <span>{{cotizacion.areaCode}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.cotizacion.telefono">Telefono</span></dt>
+                <dd>
+                    <span>{{cotizacion.telefono}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.cotizacion.movil">Movil</span></dt>
+                <dd>
+                    <span>{{cotizacion.movil}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.cotizacion.nacionalidad">Nacionalidad</span></dt>
+                <dd>
+                    <span>{{cotizacion.nacionalidad}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.cotizacion.area">Area</span></dt>
+                <dd>
+                    <span>{{cotizacion.area}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.cotizacion.fechaViaje">Fecha Viaje</span></dt>
+                <dd>
+                    <span>{{cotizacion.fechaViaje}}</span>
+                </dd>
+                <dt><span jhiTranslate="lifestudiesApp.cotizacion.programas">Programas</span></dt>
+                <dd>
+                    <div *ngIf="cotizacion.programas">
+                        <a [routerLink]="['/programas', cotizacion.programas?.id, 'view']">{{cotizacion.programas?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/cotizacion', cotizacion.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+{
+    "lifestudiesApp": {
+        "blogContenido": {
+            "home": {
+                "title": "Blog Contenidos",
+                "createLabel": "Criar novo Blog Contenido",
+                "createOrEditLabel": "Criar ou editar Blog Contenido"
+            },
+            "created": "Um novo Blog Contenido foi criado com o identificador {{ param }}",
+            "updated": "Um Blog Contenido foi atualizado com o identificador {{ param }}",
+            "deleted": "Um Blog Contenido foi deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Blog Contenido {{ id }}?"
+            },
+            "detail": {
+                "title": "Blog Contenido"
+            },
+            "nombre": "Nombre",
+            "apellido": "Apellido",
+            "correo": "Correo",
+            "nacionalidad": "Nacionalidad",
+            "paisEstudio": "Pais Estudio",
+            "calificacionPais": "Calificacion Pais",
+            "ciudadVive": "Ciudad Vive",
+            "calificacionCiudad": "Calificacion Ciudad",
+            "programaRealizado": "Programa Realizado",
+            "institucionEstudio": "Institucion Estudio",
+            "calificacionInstitucion": "Calificacion Institucion",
+            "agenciaEstudios": "Agencia Estudios",
+            "nombreAgencia": "Nombre Agencia",
+            "calificacionAgencia": "Calificacion Agencia",
+            "calificacionExperienciaEstudio": "Calificacion Experiencia Estudio",
+            "titulo": "Titulo",
+            "contenido": "Contenido",
+            "imagen": "Imagen"
+        }
+    }
+}

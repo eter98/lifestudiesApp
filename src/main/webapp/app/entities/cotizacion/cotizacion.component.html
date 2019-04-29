@@ -1,0 +1,76 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="lifestudiesApp.cotizacion.home.title">Cotizacions</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-cotizacion" [routerLink]="['/cotizacion/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="lifestudiesApp.cotizacion.home.createLabel">
+            Create new Cotizacion
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="cotizacions">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="lifestudiesApp.cotizacion.nombre">Nombre</span></th>
+            <th><span jhiTranslate="lifestudiesApp.cotizacion.apellido">Apellido</span></th>
+            <th><span jhiTranslate="lifestudiesApp.cotizacion.mail">Mail</span></th>
+            <th><span jhiTranslate="lifestudiesApp.cotizacion.areaCode">Area Code</span></th>
+            <th><span jhiTranslate="lifestudiesApp.cotizacion.telefono">Telefono</span></th>
+            <th><span jhiTranslate="lifestudiesApp.cotizacion.movil">Movil</span></th>
+            <th><span jhiTranslate="lifestudiesApp.cotizacion.nacionalidad">Nacionalidad</span></th>
+            <th><span jhiTranslate="lifestudiesApp.cotizacion.area">Area</span></th>
+            <th><span jhiTranslate="lifestudiesApp.cotizacion.fechaViaje">Fecha Viaje</span></th>
+            <th><span jhiTranslate="lifestudiesApp.cotizacion.programas">Programas</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let cotizacion of cotizacions ;trackBy: trackId">
+                <td><a [routerLink]="['/cotizacion', cotizacion.id, 'view' ]">{{cotizacion.id}}</a></td>
+                <td>{{cotizacion.nombre}}</td>
+                <td>{{cotizacion.apellido}}</td>
+                <td>{{cotizacion.mail}}</td>
+                <td>{{cotizacion.areaCode}}</td>
+                <td>{{cotizacion.telefono}}</td>
+                <td>{{cotizacion.movil}}</td>
+                <td>{{cotizacion.nacionalidad}}</td>
+                <td>{{cotizacion.area}}</td>
+                <td>{{cotizacion.fechaViaje | date:'mediumDate'}}</td>
+                <td>
+                    <div *ngIf="cotizacion.programas">
+                        <a [routerLink]="['../programas', cotizacion.programas?.id, 'view' ]" >{{cotizacion.programas?.id}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['/cotizacion', cotizacion.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/cotizacion', cotizacion.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'cotizacion', { outlets: { popup: cotizacion.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,92 @@
+{
+    "name": "BlogContenido",
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "apellido",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "correo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nacionalidad",
+            "fieldType": "Nacionalidadd",
+            "fieldValues": "Argentina,Bolivia,Brasil,Chile,Colombia,Costa_Rica,Ecuador,Guatemala,Honduras,Mexico,Nicaragua,Panama,Paraguay,Peru,Uruguay,Venezuela"
+        },
+        {
+            "fieldName": "paisEstudio",
+            "fieldType": "Destinod",
+            "fieldValues": "ALEMANIA,AUSTRALIA,CANADA,ESPANA,ESTADOS_UNIDOS,FRANCIA,INGLATERRA,IRLANDA,ITALIA,JAPON,MALTA,NUEVA_ZELANDA,SUDAFRICA,SUIZA"
+        },
+        {
+            "fieldName": "calificacionPais",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "ciudadVive",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "calificacionCiudad",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "programaRealizado",
+            "fieldType": "NivelAcademicod",
+            "fieldValues": "PRIMARIA,SECUNDARIA,PREGRADO,POSGRADO,DOCTORADO"
+        },
+        {
+            "fieldName": "institucionEstudio",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "calificacionInstitucion",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "agenciaEstudios",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "nombreAgencia",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "calificacionAgencia",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "calificacionExperienciaEstudio",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "titulo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "contenido",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        },
+        {
+            "fieldName": "imagen",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "image"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190429194950",
+    "entityTableName": "blog_contenido",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

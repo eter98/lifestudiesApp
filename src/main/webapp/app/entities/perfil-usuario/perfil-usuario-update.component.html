@@ -1,0 +1,204 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-perfil-usuario-heading" jhiTranslate="lifestudiesApp.perfilUsuario.home.createOrEditLabel">Create or edit a Perfil Usuario</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!perfilUsuario.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="perfilUsuario.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.perfilUsuario.nombre" for="field_nombre">Nombre</label>
+                    <input type="text" class="form-control" name="nombre" id="field_nombre"
+                        [(ngModel)]="perfilUsuario.nombre" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.perfilUsuario.apellido" for="field_apellido">Apellido</label>
+                    <input type="text" class="form-control" name="apellido" id="field_apellido"
+                        [(ngModel)]="perfilUsuario.apellido" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.perfilUsuario.fechaNacimiento" for="field_fechaNacimiento">Fecha Nacimiento</label>
+                    <div class="input-group">
+                        <input id="field_fechaNacimiento" type="text" class="form-control" name="fechaNacimiento" ngbDatepicker  #fechaNacimientoDp="ngbDatepicker" [(ngModel)]="perfilUsuario.fechaNacimiento"
+                        />
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="fechaNacimientoDp.toggle()"><fa-icon [icon]="'calendar-alt'"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.perfilUsuario.mail" for="field_mail">Mail</label>
+                    <input type="text" class="form-control" name="mail" id="field_mail"
+                        [(ngModel)]="perfilUsuario.mail" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.perfilUsuario.area" for="field_area">Area</label>
+                    <input type="number" class="form-control" name="area" id="field_area"
+                        [(ngModel)]="perfilUsuario.area" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.perfilUsuario.telefono" for="field_telefono">Telefono</label>
+                    <input type="number" class="form-control" name="telefono" id="field_telefono"
+                        [(ngModel)]="perfilUsuario.telefono" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.perfilUsuario.nivelAcademico" for="field_nivelAcademico">Nivel Academico</label>
+                    <input type="text" class="form-control" name="nivelAcademico" id="field_nivelAcademico"
+                        [(ngModel)]="perfilUsuario.nivelAcademico" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.perfilUsuario.areaAcademica" for="field_areaAcademica">Area Academica</label>
+                    <input type="text" class="form-control" name="areaAcademica" id="field_areaAcademica"
+                        [(ngModel)]="perfilUsuario.areaAcademica" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.perfilUsuario.terminoAcademico" for="field_terminoAcademico">Termino Academico</label>
+                    <input type="number" class="form-control" name="terminoAcademico" id="field_terminoAcademico"
+                        [(ngModel)]="perfilUsuario.terminoAcademico" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.perfilUsuario.puntajeICFES" for="field_puntajeICFES">Puntaje ICFES</label>
+                    <input type="number" class="form-control" name="puntajeICFES" id="field_puntajeICFES"
+                        [(ngModel)]="perfilUsuario.puntajeICFES" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.perfilUsuario.promedioAcademico" for="field_promedioAcademico">Promedio Academico</label>
+                    <input type="number" class="form-control" name="promedioAcademico" id="field_promedioAcademico"
+                        [(ngModel)]="perfilUsuario.promedioAcademico" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.perfilUsuario.dominioIdioma" for="field_dominioIdioma">Dominio Idioma</label>
+                    <input type="checkbox" class="form-control" name="dominioIdioma" id="field_dominioIdioma"
+                        [(ngModel)]="perfilUsuario.dominioIdioma" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.perfilUsuario.idiomas" for="field_idiomas">Idiomas</label>
+                    <input type="text" class="form-control" name="idiomas" id="field_idiomas"
+                        [(ngModel)]="perfilUsuario.idiomas" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.perfilUsuario.examenIdioma" for="field_examenIdioma">Examen Idioma</label>
+                    <input type="checkbox" class="form-control" name="examenIdioma" id="field_examenIdioma"
+                        [(ngModel)]="perfilUsuario.examenIdioma" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.perfilUsuario.examenRealizado" for="field_examenRealizado">Examen Realizado</label>
+                    <input type="text" class="form-control" name="examenRealizado" id="field_examenRealizado"
+                        [(ngModel)]="perfilUsuario.examenRealizado" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.perfilUsuario.puntajeIdioma" for="field_puntajeIdioma">Puntaje Idioma</label>
+                    <input type="number" class="form-control" name="puntajeIdioma" id="field_puntajeIdioma"
+                        [(ngModel)]="perfilUsuario.puntajeIdioma" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.perfilUsuario.becaOtorgada" for="field_becaOtorgada">Beca Otorgada</label>
+                    <input type="checkbox" class="form-control" name="becaOtorgada" id="field_becaOtorgada"
+                        [(ngModel)]="perfilUsuario.becaOtorgada" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.perfilUsuario.tipoBeca" for="field_tipoBeca">Tipo Beca</label>
+                    <input type="number" class="form-control" name="tipoBeca" id="field_tipoBeca"
+                        [(ngModel)]="perfilUsuario.tipoBeca" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.perfilUsuario.becaInstitucion" for="field_becaInstitucion">Beca Institucion</label>
+                    <input type="text" class="form-control" name="becaInstitucion" id="field_becaInstitucion"
+                        [(ngModel)]="perfilUsuario.becaInstitucion" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.perfilUsuario.grupoSocial" for="field_grupoSocial">Grupo Social</label>
+                    <input type="checkbox" class="form-control" name="grupoSocial" id="field_grupoSocial"
+                        [(ngModel)]="perfilUsuario.grupoSocial" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.perfilUsuario.fundacion" for="field_fundacion">Fundacion</label>
+                    <input type="text" class="form-control" name="fundacion" id="field_fundacion"
+                        [(ngModel)]="perfilUsuario.fundacion" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.perfilUsuario.monitor" for="field_monitor">Monitor</label>
+                    <input type="checkbox" class="form-control" name="monitor" id="field_monitor"
+                        [(ngModel)]="perfilUsuario.monitor" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.perfilUsuario.monitorMateria" for="field_monitorMateria">Monitor Materia</label>
+                    <input type="text" class="form-control" name="monitorMateria" id="field_monitorMateria"
+                        [(ngModel)]="perfilUsuario.monitorMateria" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.perfilUsuario.logrosAcademicos" for="field_logrosAcademicos">Logros Academicos</label>
+                    <input type="text" class="form-control" name="logrosAcademicos" id="field_logrosAcademicos"
+                        [(ngModel)]="perfilUsuario.logrosAcademicos" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.perfilUsuario.experienciaLaboral" for="field_experienciaLaboral">Experiencia Laboral</label>
+                    <input type="checkbox" class="form-control" name="experienciaLaboral" id="field_experienciaLaboral"
+                        [(ngModel)]="perfilUsuario.experienciaLaboral" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.perfilUsuario.areaLaboral" for="field_areaLaboral">Area Laboral</label>
+                    <input type="text" class="form-control" name="areaLaboral" id="field_areaLaboral"
+                        [(ngModel)]="perfilUsuario.areaLaboral" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.perfilUsuario.programarealizar" for="field_programarealizar">Programarealizar</label>
+                    <input type="number" class="form-control" name="programarealizar" id="field_programarealizar"
+                        [(ngModel)]="perfilUsuario.programarealizar" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.perfilUsuario.programaArea" for="field_programaArea">Programa Area</label>
+                    <input type="text" class="form-control" name="programaArea" id="field_programaArea"
+                        [(ngModel)]="perfilUsuario.programaArea" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.perfilUsuario.fechaInicio" for="field_fechaInicio">Fecha Inicio</label>
+                    <div class="input-group">
+                        <input id="field_fechaInicio" type="text" class="form-control" name="fechaInicio" ngbDatepicker  #fechaInicioDp="ngbDatepicker" [(ngModel)]="perfilUsuario.fechaInicio"
+                        />
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="fechaInicioDp.toggle()"><fa-icon [icon]="'calendar-alt'"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.perfilUsuario.programaEncontrado" for="field_programaEncontrado">Programa Encontrado</label>
+                    <input type="checkbox" class="form-control" name="programaEncontrado" id="field_programaEncontrado"
+                        [(ngModel)]="perfilUsuario.programaEncontrado" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.perfilUsuario.nombrePrograma" for="field_nombrePrograma">Nombre Programa</label>
+                    <input type="text" class="form-control" name="nombrePrograma" id="field_nombrePrograma"
+                        [(ngModel)]="perfilUsuario.nombrePrograma" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.perfilUsuario.universidad" for="field_universidad">Universidad</label>
+                    <input type="text" class="form-control" name="universidad" id="field_universidad"
+                        [(ngModel)]="perfilUsuario.universidad" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.perfilUsuario.pais" for="field_pais">Pais</label>
+                    <input type="number" class="form-control" name="pais" id="field_pais"
+                        [(ngModel)]="perfilUsuario.pais" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lifestudiesApp.perfilUsuario.merecedorBeca" for="field_merecedorBeca">Merecedor Beca</label>
+                    <input type="text" class="form-control" name="merecedorBeca" id="field_merecedorBeca"
+                        [(ngModel)]="perfilUsuario.merecedorBeca" />
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

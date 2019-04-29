@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <property name="now" value="now()" dbms="h2"/>
+    
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle, mssql"/>
+
+    <!--
+        Added the entity ViabilidadVisa.
+    -->
+    <changeSet id="20190429194949-1" author="jhipster">
+        <createTable tableName="viabilidad_visa">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="destino" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tipo_programa" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="duracion" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="nacionalidad_principal" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="otra_nacionalidad" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="fecha_nacimiento" type="date">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="genero" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="estado_civil" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="viaja_acompanado" type="boolean">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="personas_cargo" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="nivel_academico" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="profesion" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="fecha_gadruacion" type="date">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ocupacion_actual" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="carta" type="boolean">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="suspendido_estudios" type="boolean">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="perido_supencion_estu" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="razon_suspencion" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tipo_contrato" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="licencia_laboral" type="boolean">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="nivel_salarial" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tipo_labor_independiente" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tiempo_independiente" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="nivel_ingresos_independiente" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tiempo_desempleado" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="quien_financia_estudios" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="parentesco" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="presupuesto_disponible" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ahorro_disponible" type="boolean">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="idioma" type="boolean">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="certificar_idioma" type="boolean">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="certificacion_idioma" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="puntaje_certificacion" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="salidas_pais" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="paises_visitados" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="visa_pais" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="estudiado_anterior" type="boolean">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="fuera_pais" type="boolean">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="pais_fuera" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="extender_estadia" type="boolean">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="negado_visa" type="boolean">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="pais_negado" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="familiares_destino" type="boolean">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="estatus_migratorio" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="nombre" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="apelliod" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="correo" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
+        </createTable>
+        
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here, do not remove-->
+</databaseChangeLog>

@@ -1,0 +1,25 @@
+{
+    "lifestudiesApp": {
+        "programas": {
+            "home": {
+                "title": "Programas",
+                "createLabel": "Criar novo Programas",
+                "createOrEditLabel": "Criar ou editar Programas"
+            },
+            "created": "Um novo Programas foi criado com o identificador {{ param }}",
+            "updated": "Um Programas foi atualizado com o identificador {{ param }}",
+            "deleted": "Um Programas foi deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Programas {{ id }}?"
+            },
+            "detail": {
+                "title": "Programas"
+            },
+            "programaNombre": "Programa Nombre",
+            "duracion": "Duracion",
+            "tipo": "Tipo",
+            "institucion": "Institucion",
+            "cotizacion": "Cotizacion"
+        }
+    }
+}

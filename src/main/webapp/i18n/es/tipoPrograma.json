@@ -1,0 +1,22 @@
+{
+    "lifestudiesApp": {
+        "tipoPrograma": {
+            "home": {
+                "title": "Tipo Programas",
+                "createLabel": "Crear nuevo Tipo Programa",
+                "createOrEditLabel": "Crear o editar Tipo Programa"
+            },
+            "created": "Un nuevo Tipo Programa ha sido creado con el identificador {{ param }}",
+            "updated": "Un Tipo Programa ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Tipo Programa ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Tipo Programa {{ id }}?"
+            },
+            "detail": {
+                "title": "Tipo Programa"
+            },
+            "tipoNombre": "Tipo Nombre",
+            "tipoCodigo": "Tipo Codigo"
+        }
+    }
+}
